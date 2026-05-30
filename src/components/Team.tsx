@@ -8,13 +8,15 @@ const founders = [
     name: 'Maurijn Bakker',
     role: 'CEO & Co-founder',
     image: maurijnPhoto,
-    bio: 'Maurijn brengt strategische visie, marktgevoel en een scherpe focus op klantwaarde samen om financiele planning toegankelijk en schaalbaar te maken.',
+    linkedIn: 'https://www.linkedin.com/in/maurijn-bakker-069b9918/',
+    bio: 'Maurijn combineert meer dan 15 jaar bancaire ervaring met het bouwen en laten groeien van digitale proposities. Hij gelooft in klantinzichten en data om schaalbare oplossingen te ontwikkelen die concreet bijdragen aan groei, conversie en klantvertrouwen. Zijn focus: de drempels die mensen ervaren bij pensioenbeslissingen wegnemen en hen helpen betere keuzes te maken.',
   },
   {
     name: 'Bob van den Berg',
     role: 'CTO & Co-founder',
     image: bobPhoto,
-    bio: 'Bob vertaalt complexe financiele logica naar robuuste softwarearchitectuur, met aandacht voor performance, betrouwbaarheid en security.',
+    linkedIn: 'https://www.linkedin.com/in/bobberg90/',
+    bio: 'Bob is Lead Creative Technologist: een ervaren developer en technoloog met ruim 10 jaar ervaring in cloud-applicaties, AI-integraties, IT-innovaties en publieke presentaties. Hij ontwierp de volledige architectuur, van de document parser tot de privacy-first frontend. Zijn focus: technologie die complex rekenwerk onzichtbaar maakt voor de eindgebruiker.',
   },
 ];
 
@@ -44,9 +46,14 @@ function Team() {
                 <p className="mt-1 text-sm font-bold text-ocean">{founder.role}</p>
                 <p className="mt-5 leading-7 text-slate-600">{founder.bio}</p>
               </div>
-              <a className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-ink transition hover:text-ocean" href="#contact">
+              <a
+                className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-ink transition hover:text-ocean"
+                href={founder.linkedIn}
+                rel="noreferrer"
+                target="_blank"
+              >
                 <Linkedin aria-hidden="true" className="h-4 w-4" />
-                Neem contact op
+                LinkedIn profiel
               </a>
             </div>
           </article>

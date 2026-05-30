@@ -1,4 +1,4 @@
-import { ShieldCheck } from 'lucide-react';
+import { Linkedin, ShieldCheck } from 'lucide-react';
 
 function Footer() {
   return (
@@ -18,6 +18,15 @@ function Footer() {
           <a className="transition hover:text-ink" href="#sectoren">Sectoren</a>
           <a className="transition hover:text-ink" href="#over-ons">Over ons</a>
           <a className="transition hover:text-ink" href="#contact">Boek een demo</a>
+          <a
+            className="inline-flex items-center gap-1.5 transition hover:text-ink"
+            href="https://www.linkedin.com/company/118544324"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <Linkedin aria-hidden="true" className="h-4 w-4" />
+            LinkedIn
+          </a>
         </div>
       </div>
     </footer>
