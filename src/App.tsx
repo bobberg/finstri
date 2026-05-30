@@ -1,10 +1,10 @@
-import ContactForm from './components/ContactForm';
-import Footer from './components/Footer';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Sectors from './components/Sectors';
-import Solutions from './components/Solutions';
-import Team from './components/Team';
+import ContactForm from "./components/ContactForm";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Sectors from "./components/Sectors";
+import Solutions from "./components/Solutions";
+import Team from "./components/Team";
 
 function App() {
   return (
