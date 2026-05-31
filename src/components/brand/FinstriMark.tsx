@@ -17,7 +17,7 @@ function FinstriMark({
     >
       <rect fill="white" height="64" rx="15" width="64" />
       <path
-        d="M18.5 14.5V50.5M28 16.5H49.5M28 25.5H54M28 36H48M28 45H40.5"
+        d="M18.5 14.5V50.5M28 16.5H49.5M28 25.5H54M28 36H48M28"
         fill="none"
         stroke="currentColor"
         strokeLinecap="round"
