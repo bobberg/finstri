@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 
 const navigation = [
   { label: "Oplossingen", href: "#oplossingen" },
-  { label: "Sectoren", href: "#sectoren" },
+  { label: "Voor wie", href: "#voor-wie" },
   { label: "Over ons", href: "#over-ons" },
 ];
 
@@ -47,7 +47,7 @@ function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button className="min-w-36" size="md" onClick={scrollToContact}>
-            Boek een demo
+            Plan een demo
           </Button>
         </div>
 
@@ -85,7 +85,7 @@ function Header() {
                 scrollToContact();
               }}
             >
-              Boek een demo
+              Plan een demo
             </Button>
           </div>
         </div>

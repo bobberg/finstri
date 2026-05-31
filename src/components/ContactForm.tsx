@@ -1,9 +1,9 @@
 import {
   ArrowRight,
+  CalendarCheck,
   CheckCircle2,
-  LockKeyhole,
-  Mail,
-  Phone,
+  Handshake,
+  Sparkles,
 } from "lucide-react";
 import { FormEvent, useMemo, useState } from "react";
 import Button from "./ui/Button";
@@ -83,28 +83,29 @@ function ContactForm() {
       innerClassName="grid gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-start"
     >
       <div className="lg:sticky lg:top-28">
-        <p className="text-sm font-bold uppercase text-ocean">Secure contact</p>
+        <p className="text-sm font-bold uppercase text-ocean">Plan afspraak</p>
         <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
-          Plan een gesprek over de volgende stap in financiele planning.
+          Plan een gesprek over de volgende stap in pensioenplanning.
         </h2>
         <p className="mt-5 text-lg leading-8 text-slate-600">
-          Vertel kort waar je naar zoekt. We nemen zorgvuldig contact op en
-          behandelen je gegevens met dezelfde discipline die we in onze
-          producten leggen.
+          Verbeter het pensioeninzicht van je klanten en help hen om meer voor
+          hun pensioenvermogen te gaan doen met onze innovatieve tools. Weten
+          wat Finstri voor jouw bedrijf kan betekenen? Vraag vrijblijvend meer
+          informatie of een demo aan.
         </p>
 
         <div className="mt-8 grid gap-3 text-sm font-semibold text-slate-700 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
           <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4">
-            <LockKeyhole aria-hidden="true" className="h-5 w-5 text-mint" />
-            Security-first intake
+            <CalendarCheck aria-hidden="true" className="h-5 w-5 text-mint" />
+            Gratis demo
           </div>
           <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4">
-            <Mail aria-hidden="true" className="h-5 w-5 text-ocean" />
-            Reactie op maat
+            <Sparkles aria-hidden="true" className="h-5 w-5 text-ocean" />
+            Ontdek de mogelijkheden
           </div>
           <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4 sm:col-span-2 lg:col-span-1 xl:col-span-2">
-            <Phone aria-hidden="true" className="h-5 w-5 text-ocean" />
-            Geschikt voor B2B, B2C en platformgesprekken
+            <Handshake aria-hidden="true" className="h-5 w-5 text-ocean" />
+            Geheel vrijblijvend
           </div>
         </div>
       </div>
@@ -241,12 +242,7 @@ function ContactForm() {
               <CheckCircle2 aria-hidden="true" className="h-4 w-4" />
               Bedankt, we nemen snel contact op.
             </p>
-          ) : (
-            <p className="text-sm text-slate-500">
-              Verplichte velden zijn voornaam, achternaam, e-mail en
-              toestemming.
-            </p>
-          )}
+          ) : null}
         </div>
       </form>
     </Section>

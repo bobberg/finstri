@@ -14,33 +14,36 @@ function Footer() {
             <p className="text-lg font-bold tracking-normal text-ink">
               Finstri
             </p>
-            <p className="text-sm text-slate-500">
-              Premium financiele planningstools voor B2B en B2C.
-            </p>
+            <p className="text-sm text-slate-500">Premium pensioentools.</p>
           </div>
         </div>
-        <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-slate-600">
-          <a className="transition hover:text-ink" href="#oplossingen">
-            Oplossingen
-          </a>
-          <a className="transition hover:text-ink" href="#sectoren">
-            Sectoren
-          </a>
-          <a className="transition hover:text-ink" href="#over-ons">
-            Over ons
-          </a>
-          <a className="transition hover:text-ink" href="#contact">
-            Boek een demo
-          </a>
-          <a
-            className="inline-flex items-center gap-1.5 transition hover:text-ink"
-            href="https://www.linkedin.com/company/118544324"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Linkedin aria-hidden="true" className="h-4 w-4" />
-            LinkedIn
-          </a>
+        <div className="flex flex-col gap-4 sm:items-end">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm font-semibold text-slate-600">
+            <a className="transition hover:text-ink" href="#oplossingen">
+              Oplossingen
+            </a>
+            <a className="transition hover:text-ink" href="#voor-wie">
+              Voor wie
+            </a>
+            <a className="transition hover:text-ink" href="#over-ons">
+              Over ons
+            </a>
+            <a className="transition hover:text-ink" href="#contact">
+              Plan een demo
+            </a>
+            <a
+              aria-label="Finstri op LinkedIn"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line bg-white text-slate-600 transition hover:border-ocean/35 hover:text-ink"
+              href="https://www.linkedin.com/company/118544324"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <Linkedin aria-hidden="true" className="h-4 w-4" />
+            </a>
+          </div>
+          <p className="text-sm text-slate-500">
+            © 2026 Finstri. Alle rechten voorbehouden.
+          </p>
         </div>
       </div>
     </footer>
