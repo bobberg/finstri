@@ -20,6 +20,7 @@ type FormState = {
   helpWith: HelpOption;
   message: string;
   consent: boolean;
+  website: string;
 };
 
 const initialState: FormState = {
@@ -31,6 +32,7 @@ const initialState: FormState = {
   helpWith: "demo",
   message: "",
   consent: false,
+  website: "",
 };
 
 const helpOptions: Array<{ value: HelpOption; label: string }> = [
@@ -43,13 +45,15 @@ function ContactForm() {
   const [form, setForm] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
 
   const canSubmit = useMemo(
-    () =>
+    () => Boolean(
       form.firstName.trim() &&
-      form.lastName.trim() &&
-      form.email.trim() &&
-      form.consent,
+        form.lastName.trim() &&
+        form.email.trim() &&
+        form.consent,
+    ),
     [form.consent, form.email, form.firstName, form.lastName],
   );
 
@@ -59,9 +63,10 @@ function ContactForm() {
   ) => {
     setForm((current) => ({ ...current, [field]: value }));
     setIsSubmitted(false);
+    setSubmissionError("");
   };
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     if (!canSubmit) {
@@ -69,11 +74,35 @@ function ContactForm() {
     }
 
     setIsSubmitting(true);
-    window.setTimeout(() => {
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        const data = (await response.json().catch(() => null)) as {
+          message?: string;
+        } | null;
+
+        throw new Error(data?.message || "Het bericht kon niet worden verstuurd.");
+      }
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       setForm(initialState);
-    }, 900);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmissionError(
+        error instanceof Error
+          ? error.message
+          : "Het bericht kon niet worden verstuurd.",
+      );
+    }
   };
 
   return (
@@ -117,6 +146,16 @@ function ContactForm() {
         className="rounded-lg border border-line bg-white p-5 shadow-soft-xl sm:p-7"
         onSubmit={handleSubmit}
       >
+        <input
+          aria-hidden="true"
+          autoComplete="off"
+          className="hidden"
+          onChange={(event) => updateField("website", event.target.value)}
+          tabIndex={-1}
+          type="text"
+          value={form.website}
+        />
+
         <div className="grid gap-5 sm:grid-cols-2">
           <label className="block">
             <span className="text-sm font-bold text-ink">Voornaam</span>
@@ -244,6 +283,11 @@ function ContactForm() {
             >
               <CheckCircle2 aria-hidden="true" className="h-4 w-4" />
               Bedankt, we nemen snel contact op.
+            </p>
+          ) : null}
+          {submissionError ? (
+            <p className="text-sm font-bold text-red-600" role="alert">
+              {submissionError}
             </p>
           ) : null}
         </div>
