@@ -52,9 +52,9 @@ function Hero() {
             Pensioentools die inzicht omzetten in actie.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 sm:text-xl">
-            Finstri ontwikkelt pensioenplanner-technologie voor organisaties die
-            complexe berekeningen, klantdata en conversie willen vertalen naar
-            heldere keuzes voor gebruikers.
+            Finstri ontwikkelt technologie voor organisaties die complexe
+            berekeningen en klantdata willen vertalen naar helder
+            pensioenadvies.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
