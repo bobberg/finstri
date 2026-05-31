@@ -1,4 +1,4 @@
-import { Linkedin } from "lucide-react";
+import LinkedInLogo from "../assets/linkedin";
 import bobPhoto from "../../profielfotos/Bob.png";
 import maurijnPhoto from "../../profielfotos/Maurijn.png";
 import Section from "./ui/Section";
@@ -59,12 +59,12 @@ function Team() {
               </div>
               <a
                 aria-label={`LinkedIn profiel van ${founder.name}`}
-                className="mt-7 inline-flex h-10 w-10 items-center justify-center rounded-md border border-line bg-white text-ink transition hover:border-ocean/35 hover:text-ocean"
+                className="mt-7 inline-flex h-10 w-10 items-center justify-center rounded-md bg-white transition hover:-translate-y-0.5 hover:shadow-[0_18px_34px_-24px_rgba(10,102,194,0.75)]"
                 href={founder.linkedIn}
                 rel="noreferrer"
                 target="_blank"
               >
-                <Linkedin aria-hidden="true" className="h-5 w-5" />
+                <LinkedInLogo className="h-8 w-8" />
               </a>
             </div>
           </article>
