@@ -96,15 +96,18 @@ function ContactForm() {
 
         <div className="mt-8 grid gap-3 text-sm font-semibold text-slate-700 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
           <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4">
-            <CalendarCheck aria-hidden="true" className="h-5 w-5 text-mint" />
+            <CheckCircle2
+              aria-hidden="true"
+              className="mt-0.5 h-4 w-4 shrink-0 text-mint"
+            />
             Gratis demo
           </div>
-          <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4">
-            <Sparkles aria-hidden="true" className="h-5 w-5 text-ocean" />
-            Ontdek de mogelijkheden
-          </div>
-          <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4 sm:col-span-2 lg:col-span-1 xl:col-span-2">
-            <Handshake aria-hidden="true" className="h-5 w-5 text-ocean" />
+
+          <div className="flex items-center gap-3 rounded-md border border-line bg-white p-4 sm:col-span-2 lg:col-span-1 ">
+            <CheckCircle2
+              aria-hidden="true"
+              className="mt-0.5 h-4 w-4 shrink-0 text-mint"
+            />
             Geheel vrijblijvend
           </div>
         </div>
