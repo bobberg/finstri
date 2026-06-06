@@ -105,7 +105,7 @@ function Hero() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-sm font-semibold text-slate-300">
-                    Pensioen360
+                    PensioenPlanner
                   </p>
                   <h2 className="mt-1 text-xl font-bold tracking-normal sm:text-2xl">
                     Pensioenoverzicht

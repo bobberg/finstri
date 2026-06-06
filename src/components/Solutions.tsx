@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import Section from "./ui/Section";
 
-const pensioen360Features = [
+const pensioenPlannerFeatures = [
   "Jaarruimte",
   "Reserveringsruimte",
   "Pensioenbeleggen",
@@ -27,21 +27,21 @@ const pensioen360Features = [
 const products = [
   {
     icon: Gauge,
-    title: "Pensioen360",
+    title: "PensioenPlanner",
     eyebrow: "Volledig pensioenoverzicht",
     description:
       "Gegevens worden snel en automatisch doorgerekend, waardoor overzicht en inzicht direct duidelijk worden. Het product is modulair opgebouwd en past onderwerpen toe op de individuele wensen en situatie van de gebruiker.",
     detail:
-      "Alle 4 de pensioenpijlers komen samen: AOW, werkgeverspensioen, pensioenbeleggen en box 3-vermogen.",
+      "Alle 4 de pensioenpijlers komen samen: AOW, werkgeverspensioen, lijfrente en box 3-vermogen.",
   },
   {
     icon: PiggyBank,
-    title: "Pensioen Starter",
+    title: "PensioenStarter",
     eyebrow: "Conversiegericht",
     description:
       "Laat gebruikers compact het voordeel van pensioenbeleggen zien. De tool combineert jaarruimte, opbouwfase en uitkeringsfase in een slimme journey voor app en web.",
     detail:
-      "Door pensioenbeleggen of lijfrente direct in de flow te integreren, wordt de tool een conversiemiddel dat gebruikers helpt de stap naar pensioenopbouw te zetten.",
+      "Door pensioenbeleggen direct in de flow te integreren, wordt de tool een conversiemiddel dat gebruikers helpt de stap naar pensioenopbouw te zetten.",
   },
   {
     icon: Sparkles,
@@ -87,12 +87,22 @@ function Solutions() {
       <div className="max-w-3xl">
         <p className="text-sm font-bold uppercase text-ocean">Oplossingen</p>
         <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
-          PensioenPlanner-modules voor inzicht, activatie en conversie.
+          Pensioenmodules voor inzicht, activatie en conversie.
         </h2>
         <p className="mt-5 text-lg leading-8 text-slate-600">
           Van volledige 360-graden pensioeninzichten tot compacte conversietools
           en administratieve ruimtechecks: Finstri maakt pensioenplanning
           modulair, schaalbaar en direct toepasbaar.
+        </p>
+        <p className="mt-4">
+          <a
+            href="https://pensionplanner.nl"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center text-sm font-semibold text-ocean underline-offset-4 transition hover:text-ocean/80 hover:underline"
+          >
+            Bekijk pensionplanner.nl
+          </a>
         </p>
       </div>
 
@@ -108,7 +118,7 @@ function Solutions() {
             </p>
           </div>
           <div className="flex flex-1 flex-wrap gap-2 lg:justify-end">
-            {pensioen360Features.map((feature) => (
+            {pensioenPlannerFeatures.map((feature) => (
               <span
                 key={feature}
                 className="inline-flex items-center gap-1.5 rounded-md border border-line bg-cloud px-2.5 py-1.5 text-xs font-semibold text-slate-700"
