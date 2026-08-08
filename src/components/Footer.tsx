@@ -27,7 +27,7 @@ function Footer() {
             <a
               href="https://pensionplanner.nl"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label="Bezoek PensionPlanner.nl"
               className="mt-5 inline-flex rounded-md bg-white px-3 py-2 transition hover:-translate-y-0.5"
             >
@@ -116,8 +116,8 @@ function Footer() {
           <a
             aria-label="Finstri op LinkedIn"
             className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-white transition hover:-translate-y-0.5 hover:shadow-[0_18px_34px_-24px_rgba(10,102,194,0.75)]"
-            href="https://www.linkedin.com/company/118544324"
-            rel="noreferrer"
+            href="https://www.linkedin.com/company/118544324/"
+            rel="noopener noreferrer"
             target="_blank"
           >
             <LinkedInLogo className="h-8 w-8" />

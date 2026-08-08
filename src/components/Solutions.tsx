@@ -99,7 +99,7 @@ function Solutions() {
           <a
             href="https://pensionplanner.nl"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             aria-label="Bezoek PensionPlanner.nl"
             className="inline-flex items-center rounded-md border border-line bg-white px-3 py-2 shadow-[0_14px_40px_-32px_rgba(8,17,31,0.75)] transition hover:-translate-y-0.5 hover:border-ocean/35"
           >
