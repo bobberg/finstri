@@ -6,6 +6,7 @@ import {
   Layers3,
   TrendingUp,
 } from "lucide-react";
+import PensionPlannerLogo from "./brand/PensionPlannerLogo";
 import Button from "./ui/Button";
 
 const heroInsights = [
@@ -111,9 +112,16 @@ function Hero() {
                     Pensioenoverzicht
                   </h2>
                 </div>
-                <span className="rounded-md bg-mint/[0.18] px-3 py-1.5 text-xs font-bold text-mint">
-                  Live model
-                </span>
+                <div className="flex flex-col items-end gap-2">
+                  <PensionPlannerLogo
+                    className="h-8 w-auto rounded bg-white px-2 py-1"
+                    role="img"
+                    aria-label="PensionPlanner"
+                  />
+                  <span className="rounded-md bg-mint/[0.18] px-3 py-1.5 text-xs font-bold text-mint">
+                    Live model
+                  </span>
+                </div>
               </div>
 
               <div className="mt-7 grid gap-3 sm:grid-cols-3">

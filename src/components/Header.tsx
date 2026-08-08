@@ -1,6 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import FinstriMark from "./brand/FinstriMark";
+import PensionPlannerMark from "./brand/PensionPlannerMark";
 import Button from "./ui/Button";
 
 const navigation = [
@@ -27,10 +27,15 @@ function Header() {
           href="#top"
           aria-label="Finstri home"
         >
-          <FinstriMark className="h-11 w-11 shrink-0 text-[#8B5CF6] drop-shadow-[0_14px_24px_rgba(124,58,237,0.12)] transition duration-200 group-hover:-translate-y-0.5 group-hover:text-[#7C3AED]" />
-          <span className="text-xl font-bold tracking-normal text-ink">
-            Finstri
-          </span>
+          <PensionPlannerMark className="h-11 w-11 shrink-0 rounded-md border border-line drop-shadow-[0_14px_24px_rgba(24,90,140,0.12)] transition duration-200 group-hover:-translate-y-0.5" />
+          <div className="min-w-0">
+            <span className="block text-xl font-bold tracking-normal text-ink">
+              Finstri
+            </span>
+            <span className="hidden text-xs font-semibold text-slate-600 sm:block">
+              Pensionplanner
+            </span>
+          </div>
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">

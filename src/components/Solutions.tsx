@@ -8,6 +8,7 @@ import {
   PiggyBank,
   Sparkles,
 } from "lucide-react";
+import PensionPlannerLogo from "./brand/PensionPlannerLogo";
 import Section from "./ui/Section";
 
 const pensioenPlannerFeatures = [
@@ -94,16 +95,21 @@ function Solutions() {
           en administratieve ruimtechecks: Finstri maakt pensioenplanning
           modulair, schaalbaar en direct toepasbaar.
         </p>
-        <p className="mt-4">
+        <div className="mt-5">
           <a
             href="https://pensionplanner.nl"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center text-sm font-semibold text-ocean underline-offset-4 transition hover:text-ocean/80 hover:underline"
+            aria-label="Bezoek PensionPlanner.nl"
+            className="inline-flex items-center rounded-md border border-line bg-white px-3 py-2 shadow-[0_14px_40px_-32px_rgba(8,17,31,0.75)] transition hover:-translate-y-0.5 hover:border-ocean/35"
           >
-            Bekijk pensionplanner.nl
+            <PensionPlannerLogo
+              className="h-6 w-auto"
+              role="img"
+              aria-label="PensionPlanner"
+            />
           </a>
-        </p>
+        </div>
       </div>
 
       <div className="mt-8 rounded-lg border border-line bg-white p-5 shadow-[0_18px_58px_-46px_rgba(8,17,31,0.55)]">
@@ -116,6 +122,11 @@ function Solutions() {
               Modulair toe te passen op de individuele wensen en situatie van de
               gebruiker.
             </p>
+            <PensionPlannerLogo
+              className="mt-3 h-5 w-auto"
+              role="img"
+              aria-label="PensionPlanner"
+            />
           </div>
           <div className="flex flex-1 flex-wrap gap-2 lg:justify-end">
             {pensioenPlannerFeatures.map((feature) => (
@@ -144,7 +155,7 @@ function Solutions() {
               <span className="flex h-11 w-11 items-center justify-center rounded-md bg-ocean/10 text-ocean">
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
-              <span className="rounded-md bg-cloud px-3 py-1 text-xs font-bold uppercase text-slate-500">
+              <span className="rounded-md bg-cloud px-3 py-1 text-xs font-bold uppercase text-slate-600">
                 {eyebrow}
               </span>
             </div>
