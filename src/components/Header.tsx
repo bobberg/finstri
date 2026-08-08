@@ -32,9 +32,6 @@ function Header() {
             <span className="block text-xl font-bold tracking-normal text-ink">
               Finstri
             </span>
-            <span className="hidden text-xs font-semibold text-slate-600 sm:block">
-              Pensionplanner
-            </span>
           </div>
         </a>
 
