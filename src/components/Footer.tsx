@@ -97,6 +97,7 @@ function Footer() {
           </div>
         </div>
 
+        {/* Oprichtingsvermelding tijdelijk verborgen op verzoek; heractiveren zodra Finstri B.V. is opgericht.
         <p className="border-b border-white/10 py-8 text-xs leading-6 text-slate-400">
           Finstri B.V. is in oprichting. Tot de oprichting wordt Pensionplanner
           aangeboden vanuit de bestaande onderneming van mede-oprichter Maurijn
@@ -105,10 +106,12 @@ function Footer() {
           mede-oprichter Bob van den Berg. De oprichters dragen hun rechten op
           het platform bij oprichting over aan Finstri B.V.
         </p>
+        */}
 
-        <div className="flex flex-col gap-4 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-slate-400">
-            © 2026 Finstri (in oprichting). Alle rechten voorbehouden.
+            {/* © 2026 Finstri (in oprichting). Alle rechten voorbehouden. */}
+            © 2026 Finstri. Alle rechten voorbehouden.
           </p>
           <a
             aria-label="Finstri op LinkedIn"

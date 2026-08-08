@@ -30,9 +30,10 @@ function Team() {
         </h2>
         <p className="mt-5 text-lg leading-8 text-slate-600">
           Pensionplanner is gebouwd door twee oprichters die vanuit bank- en
-          technologiehoek naar hetzelfde probleem keken: pensioen is voor bijna
-          iedereen ondoorzichtig, terwijl de fiscale ruimte die je onbenut laat
-          elk jaar definitief vervalt.
+          technologiehoek naar hetzelfde probleem keken: iedereen verdient een
+          financieel gezonde toekomst, maar bijna niemand krijgt te zien wat er
+          nu al mogelijk is. Wij maken pensioen begrijpelijk, zodat mensen op
+          tijd keuzes kunnen maken waar ze later profijt van hebben.
         </p>
       </div>
 
