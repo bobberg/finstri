@@ -160,7 +160,8 @@ function ContactForm() {
           <label className="block">
             <span className="text-sm font-bold text-ink">Voornaam</span>
             <input
-              className="mt-2 h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+              autoComplete="given-name"
+              className="mt-2 h-12 w-full rounded-md border border-slate-500 bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
               onChange={(event) => updateField("firstName", event.target.value)}
               required
               type="text"
@@ -171,7 +172,8 @@ function ContactForm() {
           <label className="block">
             <span className="text-sm font-bold text-ink">Achternaam</span>
             <input
-              className="mt-2 h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+              autoComplete="family-name"
+              className="mt-2 h-12 w-full rounded-md border border-slate-500 bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
               onChange={(event) => updateField("lastName", event.target.value)}
               required
               type="text"
@@ -182,7 +184,8 @@ function ContactForm() {
           <label className="block">
             <span className="text-sm font-bold text-ink">E-mail</span>
             <input
-              className="mt-2 h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+              autoComplete="email"
+              className="mt-2 h-12 w-full rounded-md border border-slate-500 bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
               onChange={(event) => updateField("email", event.target.value)}
               required
               type="email"
@@ -193,7 +196,8 @@ function ContactForm() {
           <label className="block">
             <span className="text-sm font-bold text-ink">Telefoonnummer</span>
             <input
-              className="mt-2 h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+              autoComplete="tel"
+              className="mt-2 h-12 w-full rounded-md border border-slate-500 bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
               onChange={(event) => updateField("phone", event.target.value)}
               type="tel"
               value={form.phone}
@@ -203,7 +207,8 @@ function ContactForm() {
           <label className="block sm:col-span-2">
             <span className="text-sm font-bold text-ink">Bedrijfsnaam</span>
             <input
-              className="mt-2 h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+              autoComplete="organization"
+              className="mt-2 h-12 w-full rounded-md border border-slate-500 bg-white px-4 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
               onChange={(event) => updateField("company", event.target.value)}
               type="text"
               value={form.company}
@@ -239,7 +244,7 @@ function ContactForm() {
         <label className="mt-6 block">
           <span className="text-sm font-bold text-ink">Bericht</span>
           <textarea
-            className="mt-2 min-h-32 w-full resize-y rounded-md border border-line bg-white px-4 py-3 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-300 focus:border-ocean focus:shadow-focus-ring focus:outline-none"
+            className="mt-2 min-h-32 w-full resize-y rounded-md border border-slate-500 bg-white px-4 py-3 text-base text-ink transition placeholder:text-slate-500 hover:border-slate-700 focus:border-ocean focus:shadow-focus-ring"
             onChange={(event) => updateField("message", event.target.value)}
             placeholder="Waarmee kunnen we je helpen?"
             value={form.message}

@@ -12,10 +12,6 @@ const navigation = [
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToContact = () => {
-    document.getElementById("contact")?.scrollIntoView();
-  };
-
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/40 bg-white/85 backdrop-blur-xl">
       <nav
@@ -48,12 +44,14 @@ function Header() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button className="min-w-36" size="md" onClick={scrollToContact}>
+          <Button className="min-w-36" href="#contact" size="md">
             Plan een demo
           </Button>
         </div>
 
         <button
+          aria-controls="mobiel-menu"
+          aria-expanded={isOpen}
           aria-label={isOpen ? "Sluit menu" : "Open menu"}
           className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-line bg-white text-ink transition hover:border-ocean/35 lg:hidden"
           onClick={() => setIsOpen((value) => !value)}
@@ -68,7 +66,10 @@ function Header() {
       </nav>
 
       {isOpen ? (
-        <div className="border-t border-line bg-white px-4 py-4 shadow-soft-xl lg:hidden">
+        <div
+          className="border-t border-line bg-white px-4 py-4 shadow-soft-xl lg:hidden"
+          id="mobiel-menu"
+        >
           <div className="mx-auto flex max-w-7xl flex-col gap-2">
             {navigation.map((item) => (
               <a
@@ -82,10 +83,8 @@ function Header() {
             ))}
             <Button
               className="mt-2 w-full"
-              onClick={() => {
-                setIsOpen(false);
-                scrollToContact();
-              }}
+              href="#contact"
+              onClick={() => setIsOpen(false)}
             >
               Plan een demo
             </Button>

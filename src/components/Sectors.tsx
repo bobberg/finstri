@@ -103,19 +103,20 @@ function Sectors() {
           </p>
         </div>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row lg:mt-0">
-          <a href="#oplossingen" className="w-full sm:w-auto">
-            <Button className="w-full sm:min-w-48" variant="secondary">
-              Ontdek de mogelijkheden
-            </Button>
-          </a>
-          <a href="#contact" className="w-full sm:w-auto">
-            <Button
-              className="w-full sm:min-w-36"
-              icon={<ArrowRight aria-hidden="true" className="h-4 w-4" />}
-            >
-              Plan een demo
-            </Button>
-          </a>
+          <Button
+            className="w-full sm:min-w-48"
+            href="#oplossingen"
+            variant="secondary"
+          >
+            Ontdek de mogelijkheden
+          </Button>
+          <Button
+            className="w-full sm:min-w-36"
+            href="#contact"
+            icon={<ArrowRight aria-hidden="true" className="h-4 w-4" />}
+          >
+            Plan een demo
+          </Button>
         </div>
       </div>
     </Section>

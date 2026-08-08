@@ -1,15 +1,25 @@
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ReactNode,
+} from "react";
 import { Loader2 } from "lucide-react";
 
 type ButtonVariant = "primary" | "secondary" | "ghost";
 type ButtonSize = "sm" | "md" | "lg";
 
-type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+type SharedProps = {
   variant?: ButtonVariant;
   size?: ButtonSize;
   icon?: ReactNode;
   isLoading?: boolean;
 };
+
+type ButtonProps = SharedProps &
+  (
+    | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
+    | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
+  );
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
@@ -28,27 +38,49 @@ const sizeStyles: Record<ButtonSize, string> = {
 function Button({
   children,
   className = "",
-  disabled,
   icon,
   isLoading = false,
   size = "md",
-  type = "button",
   variant = "primary",
   ...props
 }: ButtonProps) {
-  return (
-    <button
-      className={`inline-flex items-center justify-center gap-2 rounded-md font-semibold tracking-normal transition duration-200 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-      disabled={disabled || isLoading}
-      type={type}
-      {...props}
-    >
+  const classes = `inline-flex items-center justify-center gap-2 rounded-md font-semibold tracking-normal transition duration-200 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-60 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+
+  const content = (
+    <>
       {isLoading ? (
         <Loader2 aria-hidden="true" className="h-4 w-4 animate-spin" />
       ) : (
         icon
       )}
       <span>{children}</span>
+    </>
+  );
+
+  if (typeof props.href === "string") {
+    const anchorProps = props as AnchorHTMLAttributes<HTMLAnchorElement>;
+
+    return (
+      <a className={classes} {...anchorProps}>
+        {content}
+      </a>
+    );
+  }
+
+  const {
+    disabled,
+    type = "button",
+    ...buttonProps
+  } = props as ButtonHTMLAttributes<HTMLButtonElement>;
+
+  return (
+    <button
+      className={classes}
+      disabled={disabled || isLoading}
+      type={type}
+      {...buttonProps}
+    >
+      {content}
     </button>
   );
 }

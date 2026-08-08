@@ -59,24 +59,22 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#contact" className="w-full sm:w-auto">
-              <Button
-                className="w-full sm:min-w-40"
-                icon={<ArrowRight aria-hidden="true" className="h-4 w-4" />}
-                size="lg"
-              >
-                Plan een demo
-              </Button>
-            </a>
-            <a href="#oplossingen" className="w-full sm:w-auto">
-              <Button
-                className="w-full sm:min-w-44"
-                size="lg"
-                variant="secondary"
-              >
-                Ontdek de mogelijkheden
-              </Button>
-            </a>
+            <Button
+              className="w-full sm:min-w-40"
+              href="#contact"
+              icon={<ArrowRight aria-hidden="true" className="h-4 w-4" />}
+              size="lg"
+            >
+              Plan een demo
+            </Button>
+            <Button
+              className="w-full sm:min-w-44"
+              href="#oplossingen"
+              size="lg"
+              variant="secondary"
+            >
+              Ontdek de mogelijkheden
+            </Button>
           </div>
 
           <div className="mt-10 grid gap-3 text-sm font-medium text-slate-600 sm:grid-cols-3">

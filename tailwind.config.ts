@@ -14,7 +14,7 @@ export default {
       },
       boxShadow: {
         'soft-xl': '0 24px 80px -36px rgba(8, 17, 31, 0.45)',
-        'focus-ring': '0 0 0 4px rgba(11, 92, 255, 0.16)',
+        'focus-ring': '0 0 0 4px rgba(11, 92, 255, 0.35)',
       },
       fontFamily: {
         sans: [

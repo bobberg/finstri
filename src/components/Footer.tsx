@@ -109,8 +109,8 @@ function Footer() {
         */}
 
         <div className="flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          {/* Tijdelijk zonder "(in oprichting)"; heractiveren zodra Finstri B.V. is opgericht. */}
           <p className="text-sm text-slate-400">
-            {/* © 2026 Finstri (in oprichting). Alle rechten voorbehouden. */}
             © 2026 Finstri. Alle rechten voorbehouden.
           </p>
           <a
