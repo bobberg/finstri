@@ -48,7 +48,7 @@ function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-7xl gap-14 px-4 pb-20 sm:px-6 lg:grid-cols-[1fr_0.92fr] lg:items-center lg:px-8 lg:pb-28">
-        <div className="max-w-3xl">
+        <div className="min-w-0 max-w-3xl">
           <h1 className="max-w-4xl text-4xl font-bold leading-[1.05] tracking-normal text-ink sm:text-5xl lg:text-6xl">
             Pensioentools die inzicht omzetten in actie.
           </h1>
@@ -94,15 +94,15 @@ function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[420px] lg:min-h-[560px]">
+        <div className="relative min-w-0 min-h-[420px] lg:min-h-[560px]">
           <div
             className="absolute -left-6 top-10 hidden h-28 w-28 rounded-full border border-ocean/15 bg-ocean/5 sm:block"
             aria-hidden="true"
           />
           <div className="relative mx-auto max-w-xl rounded-lg border border-line bg-white p-3 shadow-soft-xl">
             <div className="rounded-md border border-slate-200 bg-ink p-4 text-white sm:p-6">
-              <div className="flex items-center justify-between gap-4">
-                <div>
+              <div className="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap sm:items-center sm:gap-4">
+                <div className="min-w-0">
                   <p className="text-sm font-semibold text-slate-300">
                     PensioenPlanner
                   </p>
@@ -110,9 +110,9 @@ function Hero() {
                     Pensioenoverzicht
                   </h2>
                 </div>
-                <div className="flex flex-col items-end gap-2">
+                <div className="flex min-w-0 flex-col items-start gap-2 sm:items-end">
                   <PensionPlannerLogo
-                    className="h-8 w-auto rounded bg-white px-2 py-1"
+                    className="h-7 w-auto max-w-full rounded bg-white px-2 py-1 sm:h-8"
                     role="img"
                     aria-label="PensionPlanner"
                   />
