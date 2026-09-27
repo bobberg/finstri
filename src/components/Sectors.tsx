@@ -5,6 +5,7 @@ import {
   Landmark,
 } from "lucide-react";
 import Button from "./ui/Button";
+import Reveal from "./ui/Reveal";
 import Section from "./ui/Section";
 
 const audiences = [
@@ -51,30 +52,33 @@ const audiences = [
 function Sectors() {
   return (
     <Section id="voor-wie" className="bg-ink text-white">
-      <div className="max-w-3xl">
-        <p className="text-sm font-bold uppercase text-mint">Voor wie</p>
-        <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal sm:text-4xl">
+      <Reveal className="max-w-3xl">
+        <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] sm:text-4xl">
           Voor wie zijn onze pensioentools?
         </h2>
-        <p className="mt-5 text-lg leading-8 text-slate-300">
+        <p className="mt-5 max-w-[65ch] text-lg leading-8 text-slate-300">
           Van complexe fiscale berekeningen tot helder werknemersinzicht: onze
-          innovatieve pensioentools zijn modulair en schaalbaar ontworpen voor
-          professionals die pensioen inzichtelijk en actiegericht willen maken.
+          pensioentools zijn modulair en schaalbaar ontworpen voor professionals
+          die pensioen inzichtelijk en actiegericht willen maken.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mt-12 grid gap-4 lg:grid-cols-3">
-        {audiences.map(({ icon: Icon, items, title }) => (
-          <article
+        {audiences.map(({ icon: Icon, items, title }, index) => (
+          <Reveal
+            as="article"
+            index={index}
             key={title}
-            className="rounded-lg border border-white/10 bg-white/[0.06] p-6 transition duration-200 hover:-translate-y-1 hover:border-mint/35 hover:bg-white/[0.09]"
+            className="rounded-2xl bg-white/[0.06] p-6 transition-[transform,background-color] duration-200 hover:-translate-y-1 hover:bg-white/[0.1]"
           >
             <div className="flex h-full flex-col gap-5">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md bg-white text-ink">
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
               <div>
-                <h3 className="text-xl font-bold tracking-normal">{title}</h3>
+                <h3 className="text-xl font-bold tracking-[-0.01em]">
+                  {title}
+                </h3>
                 <div className="mt-5 grid gap-4">
                   {items.map((item) => (
                     <div key={item.label}>
@@ -87,13 +91,13 @@ function Sectors() {
                 </div>
               </div>
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
 
-      <div className="mt-12 rounded-lg border border-white/10 bg-white p-6 text-ink shadow-soft-xl sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-8">
+      <Reveal className="mt-12 rounded-2xl bg-white p-6 text-ink shadow-soft-xl sm:p-8 lg:flex lg:items-center lg:justify-between lg:gap-8">
         <div className="max-w-3xl">
-          <h3 className="text-2xl font-bold tracking-normal">
+          <h3 className="text-balance text-2xl font-bold tracking-[-0.02em]">
             Klaar voor de volgende stap?
           </h3>
           <p className="mt-3 leading-7 text-slate-600">
@@ -118,7 +122,7 @@ function Sectors() {
             Plan een demo
           </Button>
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }

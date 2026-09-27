@@ -48,12 +48,13 @@ function ContactForm() {
   const [submissionError, setSubmissionError] = useState("");
 
   const canSubmit = useMemo(
-    () => Boolean(
-      form.firstName.trim() &&
+    () =>
+      Boolean(
+        form.firstName.trim() &&
         form.lastName.trim() &&
         form.email.trim() &&
         form.consent,
-    ),
+      ),
     [form.consent, form.email, form.firstName, form.lastName],
   );
 
@@ -89,7 +90,9 @@ function ContactForm() {
           message?: string;
         } | null;
 
-        throw new Error(data?.message || "Het bericht kon niet worden verstuurd.");
+        throw new Error(
+          data?.message || "Het bericht kon niet worden verstuurd.",
+        );
       }
 
       setIsSubmitting(false);
@@ -112,11 +115,10 @@ function ContactForm() {
       innerClassName="grid gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-start"
     >
       <div className="lg:sticky lg:top-28">
-        <p className="text-sm font-bold uppercase text-ocean">Plan afspraak</p>
-        <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
+        <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
           Plan een gesprek over de volgende stap in pensioenplanning.
         </h2>
-        <p className="mt-5 text-lg leading-8 text-slate-600">
+        <p className="mt-5 max-w-[60ch] text-lg leading-8 text-slate-600">
           Verbeter het pensioeninzicht van je klanten en help hen om meer voor
           hun pensioenvermogen te gaan doen met onze innovatieve tools. Weten
           wat Finstri voor jouw bedrijf kan betekenen? Vraag vrijblijvend meer

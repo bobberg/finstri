@@ -1,6 +1,7 @@
 import LinkedInLogo from "../assets/linkedin";
 import bobPhoto from "../../profielfotos/Bob.png";
 import maurijnPhoto from "../../profielfotos/Maurijn.png";
+import Reveal from "./ui/Reveal";
 import Section from "./ui/Section";
 
 const founders = [
@@ -23,9 +24,8 @@ const founders = [
 function Team() {
   return (
     <Section id="over-ons" className="bg-white">
-      <div className="mx-auto max-w-3xl text-center">
-        <p className="text-sm font-bold uppercase text-ocean">Over ons</p>
-        <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
+      <Reveal className="mx-auto max-w-3xl text-center">
+        <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
           De mensen achter Pensionplanner.
         </h2>
         <p className="mt-5 text-lg leading-8 text-slate-600">
@@ -35,13 +35,15 @@ function Team() {
           nu al mogelijk is. Wij maken pensioen begrijpelijk, zodat mensen op
           tijd keuzes kunnen maken waar ze later profijt van hebben.
         </p>
-      </div>
+      </Reveal>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-2">
-        {founders.map((founder) => (
-          <article
+        {founders.map((founder, index) => (
+          <Reveal
+            as="article"
+            index={index}
             key={founder.name}
-            className="grid overflow-hidden rounded-lg border border-line bg-cloud shadow-[0_22px_70px_-48px_rgba(8,17,31,0.6)] sm:grid-cols-[220px_1fr]"
+            className="grid overflow-hidden rounded-2xl bg-cloud shadow-[0_22px_70px_-48px_rgba(8,17,31,0.6)] sm:grid-cols-[220px_1fr]"
           >
             <div className="relative min-h-[280px] bg-slate-100 sm:min-h-full">
               <img
@@ -52,7 +54,7 @@ function Team() {
             </div>
             <div className="flex flex-col justify-between p-6 sm:p-8">
               <div>
-                <h3 className="text-2xl font-bold tracking-normal text-ink">
+                <h3 className="text-2xl font-bold tracking-[-0.02em] text-ink">
                   {founder.name}
                 </h3>
                 <p className="mt-1 text-sm font-bold text-ocean">
@@ -70,20 +72,15 @@ function Team() {
                 <LinkedInLogo className="h-8 w-8" />
               </a>
             </div>
-          </article>
+          </Reveal>
         ))}
       </div>
 
-      <div className="mt-14 rounded-lg border border-line bg-cloud p-6 sm:p-8 lg:p-10">
+      <Reveal className="mt-14 rounded-2xl bg-cloud p-6 sm:p-8 lg:p-10">
         <div className="grid gap-8 lg:grid-cols-[0.6fr_1fr] lg:items-start">
-          <div>
-            <p className="text-sm font-bold uppercase text-ocean">
-              Waarom we dit bouwen
-            </p>
-            <h3 className="mt-3 text-2xl font-bold leading-tight tracking-normal text-ink sm:text-3xl">
-              Een financieel gezonde toekomst, actief opgebouwd.
-            </h3>
-          </div>
+          <h3 className="text-balance text-2xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-3xl">
+            Een financieel gezonde toekomst, actief opgebouwd.
+          </h3>
           <div className="grid gap-4 text-slate-600">
             <p className="leading-7">
               We willen mensen helpen een financieel gezonde toekomst tegemoet
@@ -108,7 +105,7 @@ function Team() {
             </p>
           </div>
         </div>
-      </div>
+      </Reveal>
     </Section>
   );
 }

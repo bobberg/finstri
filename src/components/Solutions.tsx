@@ -18,35 +18,36 @@ import {
   Wallet,
 } from "lucide-react";
 import PensionPlannerLogo from "./brand/PensionPlannerLogo";
+import Reveal from "./ui/Reveal";
 import Section from "./ui/Section";
 
 const products = [
   {
     icon: Gauge,
     title: "Pensioen Planner",
-    eyebrow: "Volledig pensioenoverzicht",
+    subtitle: "Volledig pensioenoverzicht",
     description:
-      "In deze uitgebreide en overzichtelijke tool geven we inzicht in hoeveel pensioen je aan het opbouwen bent, wat je nu al hebt opgebouwd, welke acties je zelf kunt ondernemen en wat dit betekent als je met pensioen gaat. Automatisch en makkelijk te begrijpen. We laten zien hoe je slim gebruikmaakt van je jaarruimte en reserveringsruimte voor fiscaal voordeel, en welke aanbieders van aanvullend pensioen het beste bij jouw situatie passen.",
+      "Inzicht in hoeveel pensioen iemand opbouwt, wat er al staat, welke acties nog open liggen en wat dat betekent op de pensioendatum. We laten zien hoe jaarruimte en reserveringsruimte slim worden ingezet voor fiscaal voordeel, en welke aanbieders van aanvullend pensioen bij de situatie passen.",
     detail:
-      "Alle 4 de pensioenpijlers brengen we samen: AOW, werkgeverspensioen, aanvullend pensioen en eigen vermogen. En we berekenen hoe je optimaal belastingvoordeel geniet.",
+      "Alle vier de pijlers in één beeld: AOW, werkgeverspensioen, aanvullend pensioen en eigen vermogen.",
   },
   {
     icon: PiggyBank,
     title: "Pensioenbeleggen",
-    eyebrow: "De stap naar pensioenbeleggen",
+    subtitle: "De stap naar pensioenbeleggen",
     description:
-      "Hiermee laten we het voordeel van pensioenbeleggen zien. We berekenen nauwkeurig de beschikbare jaarruimte, reserveringsruimte en welke aanbieder van pensioenbeleggen het beste past. Het slimme rekenmodel zorgt ervoor dat je precies weet waar je aan toe bent, zodat je de goede keuzes voor later kunt maken.",
+      "Het rekenmodel bepaalt de beschikbare jaarruimte, de reserveringsruimte en welke aanbieder past. In een paar begrijpelijke stappen wordt duidelijk wat pensioenbeleggen oplevert ten opzichte van sparen, en hoeveel er later te besteden is.",
     detail:
-      "In een aantal eenvoudige stappen wordt de gebruiker meegenomen naar precies inzicht in de mogelijkheden van pensioenbeleggen en wat dat op termijn oplevert.",
+      "Ontworpen als conversiepad: van eerste berekening naar een onderbouwde keuze.",
   },
   {
     icon: Sparkles,
     title: "Jaarruimte en Reserveringsruimte",
-    eyebrow: "Administratie automatisch op orde",
+    subtitle: "Administratie automatisch op orde",
     description:
-      "Beleg of spaar je al voor je pensioen? Dan geeft deze tool overzicht van de jaarruimtes die al zijn gebruikt, welke reserveringsruimte er nog over is en wat de jaarruimte van dit jaar is. Zo weet je precies hoeveel er nog bijgestort kan worden, met meteen een handig overzicht voor de belastingaangifte.",
+      "Voor wie al belegt of spaart voor pensioen: welke jaarruimtes zijn gebruikt, wat is er nog over aan reserveringsruimte en hoeveel kan er dit jaar bij. Meteen een bruikbaar overzicht voor de belastingaangifte.",
     detail:
-      "Het model berekent automatisch de jaarruimtes van de afgelopen 10 jaar en de resterende reserveringsruimte, met advies over de maximale inleg binnen de fiscale grenzen.",
+      "Automatisch over de afgelopen tien jaar, met de maximale inleg binnen de fiscale grenzen.",
   },
 ];
 
@@ -55,73 +56,73 @@ const features = [
     icon: Calculator,
     title: "Jaarruimte",
     description:
-      "Geen ingewikkelde belastingaangiftes meer doorspitten. Onze tool berekent de jaarruimte van je klant volledig automatisch. Binnen een paar seconden is duidelijk hoeveel geld er dit jaar met belastingvoordeel opzij gezet kan worden.",
+      "Geen belastingaangiftes meer doorspitten. De jaarruimte wordt volledig automatisch berekend: binnen seconden is duidelijk hoeveel er dit jaar met belastingvoordeel opzij kan.",
   },
   {
     icon: RotateCcw,
     title: "Reserveringsruimte",
     description:
-      "Onbenut belastingvoordeel uit het verleden laat je niet liggen. De tool rekent automatisch tot 10 jaar terug. Zo verander je oude cijfers in een paar klikken in extra geld voor later, met meteen een handig overzicht voor de belastingaangifte.",
+      "Onbenut belastingvoordeel uit het verleden blijft niet liggen. De tool rekent tot tien jaar terug en verandert oude cijfers in een paar klikken in extra geld voor later.",
   },
   {
     icon: LineChart,
     title: "Pensioenbeleggen",
     description:
-      "Laat je klanten zien wat hun geld echt kan doen. De tool laat supersnel zien wat pensioenbeleggen kan opleveren ten opzichte van normaal beleggen en sparen. Zo wordt de stap naar beleggen voor later heel logisch en aantrekkelijk.",
+      "Laat zien wat pensioenbeleggen oplevert ten opzichte van normaal beleggen en sparen. Zo wordt de stap naar beleggen voor later logisch en aantrekkelijk.",
   },
   {
     icon: Gauge,
-    title: "Opbouwfase pensioen",
+    title: "Opbouwfase",
     description:
-      "Bouwt je klant genoeg op voor later? Onze tool checkt het huidige tempo en laat direct zien of er een pensioengat dreigt. Zo weet je klant precies welke actie er nu nodig is om het doel te halen.",
+      "Bouwt je klant genoeg op? De tool checkt het huidige tempo en laat direct zien of er een pensioengat dreigt, en welke actie nu nodig is om het doel te halen.",
   },
   {
     icon: Banknote,
-    title: "Uitkeringsfase pensioen",
+    title: "Uitkeringsfase",
     description:
-      "Als het pensioen ingaat, wil je klant weten waar hij aan toe is. De tool berekent hoe de opgebouwde pot slim en fiscaal gunstig wordt omgezet in een stabiel maandelijks inkomen, en wat een lijfrente-uitkering betekent voor de portemonnee.",
+      "Als het pensioen ingaat: hoe de opgebouwde pot fiscaal gunstig wordt omgezet in een stabiel maandinkomen, en wat een lijfrente-uitkering betekent voor de portemonnee.",
   },
   {
     icon: Landmark,
     title: "AOW",
     description:
-      "Een compleet overzicht kan niet zonder de AOW. Onze tool rekent de actuele AOW-leeftijd en -bedragen automatisch mee. De klant ziet meteen vanaf welke dag het geld van de overheid ingaat en wat er nog mist.",
+      "De actuele AOW-leeftijd en -bedragen rekenen automatisch mee. Meteen zichtbaar vanaf welke dag het geld van de overheid ingaat en wat er nog mist.",
   },
   {
     icon: Building2,
     title: "Werkgeverspensioen",
     description:
-      "Wat heeft je klant al opgebouwd bij huidige of vorige werkgevers? De tool haalt deze cijfers moeiteloos op en telt ze mee in het overzicht. Zo krijgt je klant in een keer grip op het totale plaatje.",
+      "Opbouw bij huidige en vorige werkgevers wordt moeiteloos opgehaald en meegeteld. Zo ontstaat in één keer grip op het totale plaatje.",
   },
   {
     icon: Wallet,
     title: "Overig vermogen",
     description:
-      "Pensioen is meer dan alleen je pensioenpot. Of het nu gaat om spaargeld of beleggingen: onze tool neemt al het eigen vermogen mee voor een compleet toekomstbeeld.",
+      "Pensioen is meer dan de pensioenpot. Spaargeld en beleggingen tellen mee, zodat het toekomstbeeld compleet is.",
   },
   {
     icon: BrainCircuit,
     title: "AI Pensioenadvies",
     description:
-      "Versnel je werk met onze ingebouwde AI-assistent. De tool bekijkt alle cijfers vlijmscherp en geeft direct slimme, persoonlijke suggesties. Dat scheelt denkwerk en helpt je de klant nog sneller te adviseren.",
+      "De ingebouwde assistent leest alle cijfers en geeft direct persoonlijke suggesties. Dat scheelt denkwerk en versnelt het adviesgesprek.",
   },
   {
     icon: FileText,
     title: "Overzichtelijk rapport",
     description:
-      "Zet berekeningen direct om in actie. Met een klik download je een helder, visueel pensioenrapport. Ideaal voor de klant om thuis rustig na te lezen, of voor jou om te gebruiken tijdens een gesprek.",
+      "Met één klik een helder, visueel pensioenrapport. Om thuis rustig na te lezen, of om te gebruiken tijdens het gesprek.",
   },
   {
     icon: Palette,
-    title: "Alles in jouw huisstijl",
+    title: "Jouw huisstijl",
     description:
-      "Onze software, maar dan met jouw uitstraling. Van logo's tot kleuren, lettertypes en zelfs taal: voor de klant voelt het alsof de tool en de rapporten helemaal door jou zijn gemaakt.",
+      "Onze software, jouw uitstraling. Van logo's tot kleuren, lettertypes en taal: voor de klant voelt het alsof je het zelf hebt gebouwd.",
   },
   {
     icon: ShieldCheck,
     title: "Privacy",
     description:
-      "Onze tool bewaart geen gevoelige gegevens op een centrale server, maar gebruikt de veilige opslag van de computer van de gebruiker zelf (local storage). Zo voldoen we aan de strengste privacyregels en is de data altijd veilig.",
+      "Geen gevoelige gegevens op een centrale server. De tool gebruikt de lokale opslag van de gebruiker zelf, zodat de data het apparaat niet verlaat.",
   },
 ];
 
@@ -130,7 +131,7 @@ const capabilities = [
     icon: BrainCircuit,
     title: "Slimme technologie",
     description:
-      "Een intelligente motor automatiseert document parsing, extraheert de juiste gegevens en past fiscale rekenregels toe. Zo worden ruwe documenten binnen seconden omgezet in bruikbare pensioeninzichten.",
+      "Een intelligente motor automatiseert document parsing, extraheert de juiste gegevens en past fiscale rekenregels toe. Ruwe documenten worden binnen seconden bruikbare pensioeninzichten.",
   },
   {
     icon: Layers3,
@@ -142,7 +143,7 @@ const capabilities = [
     icon: LockKeyhole,
     title: "Privacy first",
     description:
-      "Gegevens worden niet opgeslagen op externe servers, maar uitsluitend in de local storage van de eigen browser. Gevoelige data verlaat het apparaat niet en blijft onder controle van de gebruiker.",
+      "Gegevens worden niet opgeslagen op externe servers, maar uitsluitend in de local storage van de eigen browser. Gevoelige data verlaat het apparaat niet.",
   },
   {
     icon: BarChart3,
@@ -155,128 +156,123 @@ const capabilities = [
 function Solutions() {
   return (
     <Section id="oplossingen" className="bg-cloud">
-      <div className="max-w-3xl">
-        <p className="text-sm font-bold uppercase text-ocean">Oplossingen</p>
-        <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
-          Pensioenmodules voor inzicht, activatie en conversie.
+      <Reveal className="max-w-3xl">
+        <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
+          Drie pensioenmodules voor inzicht, activatie en conversie.
         </h2>
-        <p className="mt-5 text-lg leading-8 text-slate-600">
+        <p className="mt-5 max-w-[65ch] text-lg leading-8 text-slate-600">
           Van een volledig pensioenoverzicht tot pensioenbeleggen en het
-          automatisch bijhouden van jaarruimte en reserveringsruimte: Finstri
-          maakt pensioenplanning modulair, schaalbaar en direct toepasbaar.
+          automatisch bijhouden van jaarruimte en reserveringsruimte. Alles
+          draait op hetzelfde rekenhart achter PensionPlanner.
         </p>
-        <div className="mt-5">
-          <a
-            href="https://pensionplanner.nl"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Bezoek PensionPlanner.nl"
-            className="inline-flex items-center rounded-md border border-line bg-white px-3 py-2 shadow-[0_14px_40px_-32px_rgba(8,17,31,0.75)] transition hover:-translate-y-0.5 hover:border-ocean/35"
-          >
-            <PensionPlannerLogo
-              className="h-6 w-auto"
-              role="img"
-              aria-label="PensionPlanner"
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="mt-12 grid gap-5 lg:grid-cols-3">
-        {products.map(({ description, detail, eyebrow, icon: Icon, title }) => (
-          <article
-            key={title}
-            className="flex min-h-full flex-col rounded-lg border border-line bg-white p-6 shadow-[0_20px_60px_-44px_rgba(8,17,31,0.55)] transition duration-200 hover:-translate-y-1 hover:border-ocean/25"
-          >
-            <div className="flex items-start justify-between gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-md bg-ocean/10 text-ocean">
-                <Icon aria-hidden="true" className="h-5 w-5" />
-              </span>
-              <span className="rounded-md bg-cloud px-3 py-1 text-xs font-bold uppercase text-slate-600">
-                {eyebrow}
-              </span>
-            </div>
-            <h3 className="mt-6 text-2xl font-bold tracking-normal text-ink">
-              {title}
-            </h3>
-            <p className="mt-4 leading-7 text-slate-600">{description}</p>
-            <p className="mt-auto pt-4 text-sm font-semibold leading-6 text-ink">
-              {detail}
-            </p>
-          </article>
-        ))}
-      </div>
-
-      <div className="mt-16" id="functies">
-        <div className="max-w-3xl">
-          <p className="text-sm font-bold uppercase text-ocean">Functies</p>
-          <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
-            Alles wat je nodig hebt voor een compleet pensioenverhaal.
-          </h2>
-          <p className="mt-5 text-lg leading-8 text-slate-600">
-            Modulair toe te passen op de individuele wensen en situatie van de
-            gebruiker.
-          </p>
+        <a
+          href="https://pensionplanner.nl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Bezoek PensionPlanner.nl"
+          className="mt-5 inline-flex items-center rounded-md bg-white px-3 py-2 shadow-[0_14px_40px_-32px_rgba(8,17,31,0.75)] transition duration-200 hover:-translate-y-0.5"
+        >
           <PensionPlannerLogo
-            className="mt-5 h-5 w-auto"
+            className="h-6 w-auto"
             role="img"
             aria-label="PensionPlanner"
           />
-        </div>
+        </a>
+      </Reveal>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map(({ description, icon: Icon, title }) => (
-            <article
+      <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        {products.map(
+          ({ description, detail, subtitle, icon: Icon, title }, index) => (
+            <Reveal
+              as="article"
+              index={index}
               key={title}
-              className="rounded-lg border border-line bg-white p-5 transition duration-200 hover:-translate-y-0.5 hover:border-ocean/25"
+              className="flex min-h-full flex-col rounded-2xl bg-white p-6 shadow-[0_20px_60px_-44px_rgba(8,17,31,0.55)] transition-[transform,box-shadow] duration-200 hover:-translate-y-1 hover:shadow-[0_28px_70px_-40px_rgba(8,17,31,0.6)]"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-ocean/10 text-ocean">
+              <span className="flex h-11 w-11 items-center justify-center rounded-md bg-ocean/10 text-ocean">
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
-              <h3 className="mt-4 text-lg font-bold tracking-normal text-ink">
+              <h3 className="mt-6 text-2xl font-bold tracking-[-0.02em] text-ink">
+                {title}
+              </h3>
+              <p className="mt-1 text-sm font-semibold text-ocean">
+                {subtitle}
+              </p>
+              <p className="mt-4 leading-7 text-slate-600">{description}</p>
+              <p className="mt-auto pt-5 text-sm font-semibold leading-6 text-ink">
+                {detail}
+              </p>
+            </Reveal>
+          ),
+        )}
+      </div>
+
+      <div className="mt-20 scroll-mt-24" id="functies">
+        <Reveal className="max-w-3xl">
+          <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
+            Twaalf functies, modulair in te zetten.
+          </h2>
+          <p className="mt-5 max-w-[65ch] text-lg leading-8 text-slate-600">
+            Elke module is los af te nemen en past zich aan de situatie van de
+            eindgebruiker aan.
+          </p>
+        </Reveal>
+
+        <dl className="mt-10 grid gap-x-12 sm:grid-cols-2">
+          {features.map(({ description, icon: Icon, title }, index) => (
+            <Reveal
+              as="div"
+              index={index % 2}
+              key={title}
+              className="flex gap-4 border-t border-line py-6"
+            >
+              <Icon
+                aria-hidden="true"
+                className="mt-1 h-5 w-5 shrink-0 text-ocean"
+              />
+              <div>
+                <dt className="text-lg font-bold tracking-[-0.01em] text-ink">
+                  {title}
+                </dt>
+                <dd className="mt-1.5 max-w-[52ch] text-sm leading-6 text-slate-600">
+                  {description}
+                </dd>
+              </div>
+            </Reveal>
+          ))}
+        </dl>
+      </div>
+
+      <div className="mt-20 rounded-2xl bg-white p-6 shadow-[0_24px_80px_-54px_rgba(8,17,31,0.65)] sm:p-8 lg:p-10">
+        <Reveal className="grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-end">
+          <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
+            Pensioentooling die vertrouwen vertaalt naar actie.
+          </h2>
+          <p className="max-w-[65ch] text-lg leading-8 text-slate-600">
+            Finstri combineert slimme technologie, productstrategie en
+            financiele kennis tot tools die eenvoudig voelen, maar complexe
+            berekeningen en datastromen aankunnen.
+          </p>
+        </Reveal>
+
+        <div className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-4">
+          {capabilities.map(({ description, icon: Icon, title }, index) => (
+            <Reveal
+              as="article"
+              index={index}
+              key={title}
+              className="border-t border-line pt-5"
+            >
+              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-cloud text-ocean">
+                <Icon aria-hidden="true" className="h-5 w-5" />
+              </span>
+              <h3 className="mt-4 text-lg font-bold tracking-[-0.01em] text-ink">
                 {title}
               </h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 {description}
               </p>
-            </article>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-16 rounded-lg border border-line bg-white p-6 shadow-[0_24px_80px_-54px_rgba(8,17,31,0.65)] sm:p-8 lg:p-10">
-        <div className="grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-end">
-          <div>
-            <p className="text-sm font-bold uppercase text-ocean">
-              Technologie
-            </p>
-            <h2 className="mt-3 text-3xl font-bold leading-tight tracking-normal text-ink sm:text-4xl">
-              Pensioen tooling die vertrouwen vertaalt naar actie.
-            </h2>
-          </div>
-          <p className="text-lg leading-8 text-slate-600">
-            Finstri combineert slimme technologie, productstrategie en
-            financiele kennis tot tools die eenvoudig voelen, maar complexe
-            berekeningen en datastromen aankunnen.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {capabilities.map(({ description, icon: Icon, title }) => (
-            <article
-              key={title}
-              className="rounded-lg border border-line bg-cloud p-5"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-md bg-white text-ocean shadow-[0_16px_36px_-28px_rgba(8,17,31,0.65)]">
-                <Icon aria-hidden="true" className="h-5 w-5" />
-              </span>
-              <h3 className="mt-5 text-lg font-bold tracking-normal text-ink">
-                {title}
-              </h3>
-              <p className="mt-3 text-sm leading-6 text-slate-600">
-                {description}
-              </p>
-            </article>
+            </Reveal>
           ))}
         </div>
       </div>
