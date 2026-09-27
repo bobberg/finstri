@@ -4,10 +4,7 @@ import PensionPlannerMark from "./brand/PensionPlannerMark";
 
 function Footer() {
   return (
-    <footer
-      id="privacy"
-      className="bg-ink px-4 py-12 text-white sm:px-6 lg:px-8"
-    >
+    <footer className="bg-ink px-4 py-12 text-white sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-10 border-b border-white/10 pb-10 lg:grid-cols-[1fr_0.45fr_0.6fr] lg:items-start">
           <div>
@@ -67,6 +64,12 @@ function Footer() {
               href="#contact"
             >
               Plan een demo
+            </a>
+            <a
+              className="font-semibold text-slate-200 transition hover:text-white"
+              href="/privacy"
+            >
+              Privacyverklaring
             </a>
           </nav>
 

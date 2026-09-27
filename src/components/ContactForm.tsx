@@ -266,7 +266,7 @@ function ContactForm() {
             te verwerken volgens de{" "}
             <a
               className="font-bold text-ocean transition hover:text-ink"
-              href="#privacy"
+              href="/privacy"
             >
               privacyverklaring
             </a>

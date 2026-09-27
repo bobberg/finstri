@@ -10,7 +10,7 @@ const navigation = [
   { label: "Over ons", href: "#over-ons" },
 ];
 
-function Header() {
+function Header({ linkPrefix = "" }: { linkPrefix?: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -21,7 +21,7 @@ function Header() {
       >
         <a
           className="group flex min-w-0 items-center gap-3"
-          href="#top"
+          href={`${linkPrefix}#top`}
           aria-label="Finstri home"
         >
           <PensionPlannerMark className="h-11 w-11 shrink-0 rounded-md border border-line drop-shadow-[0_14px_24px_rgba(24,90,140,0.12)] transition duration-200 group-hover:-translate-y-0.5" />
@@ -37,7 +37,7 @@ function Header() {
             <a
               key={item.href}
               className="text-sm font-semibold text-slate-600 transition hover:text-ink"
-              href={item.href}
+              href={`${linkPrefix}${item.href}`}
             >
               {item.label}
             </a>
@@ -45,7 +45,7 @@ function Header() {
         </div>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button className="min-w-36" href="#contact" size="md">
+          <Button className="min-w-36" href={`${linkPrefix}#contact`} size="md">
             Plan een demo
           </Button>
         </div>
@@ -76,7 +76,7 @@ function Header() {
               <a
                 key={item.href}
                 className="rounded-md px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-cloud hover:text-ink"
-                href={item.href}
+                href={`${linkPrefix}${item.href}`}
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -84,7 +84,7 @@ function Header() {
             ))}
             <Button
               className="mt-2 w-full"
-              href="#contact"
+              href={`${linkPrefix}#contact`}
               onClick={() => setIsOpen(false)}
             >
               Plan een demo

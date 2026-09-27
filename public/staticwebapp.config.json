@@ -4,9 +4,10 @@
     "exclude": [
       "/assets/*",
       "/api/*",
+      "/video/*",
       "/robots.txt",
       "/sitemap.xml",
-      "*.{svg,png,jpg,jpeg,webp,ico,txt,xml,json,css,js}"
+      "*.{svg,png,jpg,jpeg,webp,ico,txt,xml,json,css,js,mp4,vtt}"
     ]
   },
   "globalHeaders": {
@@ -20,6 +21,8 @@
   "mimeTypes": {
     ".txt": "text/plain",
     ".xml": "application/xml",
-    ".svg": "image/svg+xml"
+    ".svg": "image/svg+xml",
+    ".mp4": "video/mp4",
+    ".vtt": "text/vtt"
   }
 }
