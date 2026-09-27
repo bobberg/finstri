@@ -4,6 +4,7 @@ import PensionPlannerMark from "./brand/PensionPlannerMark";
 import Button from "./ui/Button";
 
 const navigation = [
+  { label: "In actie", href: "#in-actie" },
   { label: "Oplossingen", href: "#oplossingen" },
   { label: "Functies", href: "#functies" },
   { label: "Voor wie", href: "#voor-wie" },
