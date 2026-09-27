@@ -6,6 +6,7 @@ import Privacy from "./components/Privacy";
 import Sectors from "./components/Sectors";
 import Solutions from "./components/Solutions";
 import Team from "./components/Team";
+import VideoIntro from "./components/VideoIntro";
 
 // The site ships as one bundle and Azure Static Web Apps rewrites unknown
 // paths to index.html, so a single path check gives the privacyverklaring a
@@ -36,6 +37,7 @@ function App() {
         ) : (
           <>
             <Hero />
+            <VideoIntro />
             <Solutions />
             <Sectors />
             <Team />

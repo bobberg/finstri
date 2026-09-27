@@ -1,8 +1,17 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import PensionPlannerLogo from "./brand/PensionPlannerLogo";
 import Button from "./ui/Button";
 import Reveal from "./ui/Reveal";
-import VideoPlayer from "./ui/VideoPlayer";
+
+// Illustrative figures for one example profile, not a product claim.
+const exampleRows = [
+  { label: "Inkomen", value: "\u20ac 65.000" },
+  { label: "Factor A", value: "\u20ac 600" },
+  { label: "Beschikbare ruimte", value: "\u20ac 9.987" },
+  { label: "Belastingvoordeel", value: "\u20ac 3.751" },
+];
+
+const pillars = ["AOW", "Werkgever", "Lijfrente", "Vermogen"];
 
 const proofPoints = [
   [
@@ -70,25 +79,75 @@ function Hero() {
         </Reveal>
 
         <Reveal className="relative min-w-0" index={2}>
-          <figure className="mx-auto max-w-[23rem] lg:max-w-[26rem]">
-            <VideoPlayer
-              className="aspect-[4/5] shadow-soft-xl"
-              captions="/video/pensionplanner-intro.nl.vtt"
-              label="Speel de introductievideo van Pensionplanner af"
-              poster="/video/pensionplanner-intro-poster.jpg"
-              src="/video/pensionplanner-intro.mp4"
-            />
-            <figcaption className="mt-5 flex items-start gap-3 border-t border-line pt-4">
+          <figure className="relative mx-auto max-w-xl rounded-2xl bg-ink p-6 text-white shadow-soft-xl sm:p-8">
+            <figcaption className="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap sm:items-center sm:gap-4">
+              <div className="min-w-0">
+                <p className="text-xl font-bold tracking-[-0.02em] sm:text-2xl">
+                  Van document naar totaaloverzicht
+                </p>
+                <p className="mt-1 text-sm text-slate-400">
+                  Voorbeeldberekening, geen echte klantdata
+                </p>
+              </div>
               <PensionPlannerLogo
-                className="mt-0.5 h-5 w-auto shrink-0"
+                className="h-7 w-auto max-w-full rounded bg-white px-2 py-1 sm:h-8"
                 role="img"
                 aria-label="PensionPlanner"
               />
-              <p className="text-sm leading-6 text-slate-600">
-                Zie in <span data-numeric>60</span> seconden hoe Pensionplanner
-                vier pensioenpijlers samenbrengt in een netto maandoverzicht.
-              </p>
             </figcaption>
+
+            <p className="mt-7 flex items-center gap-2 text-sm text-slate-300">
+              <span
+                className="rounded bg-white/10 px-2 py-1 font-semibold text-white"
+                data-numeric
+              >
+                2026
+              </span>
+              Inkomensverklaring 2025.pdf
+            </p>
+
+            <dl className="mt-5 divide-y divide-white/10 border-y border-white/10">
+              {exampleRows.map(({ label, value }, rowIndex) => (
+                <div
+                  key={label}
+                  className="flex items-baseline justify-between gap-4 py-3.5"
+                >
+                  <dt className="text-sm text-slate-300">{label}</dt>
+                  <dd
+                    className={`text-lg font-bold ${
+                      rowIndex === exampleRows.length - 1
+                        ? "text-mint"
+                        : "text-white"
+                    }`}
+                    data-numeric
+                  >
+                    {value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <p className="mt-6 text-xs font-bold uppercase tracking-wider text-slate-400">
+              Pensioenpijlers
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-2">
+              {pillars.map((pillar) => (
+                <li
+                  key={pillar}
+                  className="rounded-md bg-white/[0.08] px-3 py-1.5 text-sm font-semibold text-slate-200"
+                >
+                  {pillar}
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-7 flex items-start gap-2.5 text-sm leading-6 text-slate-300">
+              <ShieldCheck
+                aria-hidden="true"
+                className="mt-0.5 h-4 w-4 shrink-0 text-mint"
+              />
+              Inkomen, factor A en pensioenkapitaal verlaten het apparaat niet.
+            </p>
           </figure>
         </Reveal>
       </div>
