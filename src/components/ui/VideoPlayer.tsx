@@ -25,7 +25,9 @@ function VideoPlayer({
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-2xl bg-cloud ${className}`}>
+    <div
+      className={`relative overflow-hidden rounded-2xl bg-cloud ${className}`}
+    >
       <video
         ref={videoRef}
         className="block h-full w-full"

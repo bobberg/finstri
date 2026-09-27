@@ -212,7 +212,7 @@ function Solutions() {
           <h2 className="text-balance text-3xl font-bold leading-tight tracking-[-0.02em] text-ink sm:text-4xl">
             Twaalf functies, modulair in te zetten.
           </h2>
-          <p className="mt-5 max-w-[65ch] text-lg leading-8 text-slate-600">
+          <p className="mt-5 text-lg leading-8 text-slate-600">
             Elke module is los af te nemen en past zich aan de situatie van de
             eindgebruiker aan.
           </p>
