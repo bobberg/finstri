@@ -81,14 +81,9 @@ function Hero() {
         <Reveal className="relative min-w-0" index={2}>
           <figure className="relative mx-auto max-w-xl rounded-2xl bg-ink p-6 text-white shadow-soft-xl sm:p-8">
             <figcaption className="flex flex-wrap items-start justify-between gap-3 sm:flex-nowrap sm:items-center sm:gap-4">
-              <div className="min-w-0">
-                <p className="text-xl font-bold tracking-[-0.02em] sm:text-2xl">
-                  Van document naar totaaloverzicht
-                </p>
-                <p className="mt-1 text-sm text-slate-400">
-                  Voorbeeldberekening, geen echte klantdata
-                </p>
-              </div>
+              <p className="min-w-0 text-xl font-bold tracking-[-0.02em] sm:text-2xl">
+                Van document naar totaaloverzicht
+              </p>
               <PensionPlannerLogo
                 className="h-7 w-auto max-w-full rounded bg-white px-2 py-1 sm:h-8"
                 role="img"
