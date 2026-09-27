@@ -5,6 +5,7 @@ import Button from "./ui/Button";
 
 const navigation = [
   { label: "Oplossingen", href: "#oplossingen" },
+  { label: "Functies", href: "#functies" },
   { label: "Voor wie", href: "#voor-wie" },
   { label: "Over ons", href: "#over-ons" },
 ];
